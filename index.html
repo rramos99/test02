@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <title>Manage Request</title> 
+  <body>
+    <h3>Manage Request</h3>  
+    <table cellspacing="2" align="center" cellpadding="8" border="0">  
+      <tr><td>Comments</td></tr>  
+      <tr><td><input type="text" placeholder="Comments" id="co"></td></tr>  
+      <tr><td>  
+      <input type="button" onclick="onApprove()" value="Approve">
+      <input type="button" onclick="myFunction()" value="Reject">
+    </table>  
+    <script>
+      function onApprove() {
+        var n=document.getElementById("co").value; 
+      }
+      function onReject() {
+      }
+    </script>
+  </body>
+</html>
