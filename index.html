@@ -13,6 +13,12 @@
     <script>
       function onApprove() {
         var n=document.getElementById("co").value; 
+        let paramString = urlString.split('?')[1];
+        let queryString = new URLSearchParams(paramString);
+        for (let pair of queryString.entries()) {
+          console.log("Id: " + pair[0]);
+          console.log("SpId: " + pair[1]);
+        }        
       }
       function onReject() {
       }
