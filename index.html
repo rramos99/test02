@@ -11,7 +11,7 @@
       <input type="button" onclick="myFunction()" value="Reject">
     </table>  
     <script>
-      function onApprove() {
+      function onApprove(urlString) {
         var Co=document.getElementById("co").value; 
         let paramString = urlString.split('?')[1];
         let queryString = new URLSearchParams(paramString);
@@ -23,7 +23,7 @@
         Url = Url + "?Id="+pair[0]+"&SpId="+pair[1]+"&Com="+Co+"&Res=Approved";
         $.ajax({ url: Url });        
       }
-      function onReject() {
+      function onReject(urlString) {
         var Co=document.getElementById("co").value; 
         let paramString = urlString.split('?')[1];
         let queryString = new URLSearchParams(paramString);
