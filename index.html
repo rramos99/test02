@@ -35,6 +35,17 @@
         Url = Url + "?Id="+pair[0]+"&SpId="+pair[1]+"&Com="+Co+"&Res=Approved";
         $.ajax({ url: Url });        
       }
+      function readSearchParams() {
+        let usp = new URLSearchParams(window.location.search);
+        let params = {};
+        usp.forEach((value, key) => {
+        if (!params[key]) {
+          params[key] = [];
+        }
+        params[key].push(value);
+      });
+  return params;
+}      
     </script>
   </body>
 </html>
