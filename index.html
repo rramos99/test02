@@ -17,7 +17,7 @@
       
         var Url="https://script.google.com/a/macros/envases.dk/s/AKfycbzVrPsljDBZjxYCiCRylqv6dGa5YsLWJOC3ZlHNw6erqkVYDlLbOFrPu5kZc5bkJ0NGdA/exec";
         Url = Url + "?Id="+params.Id+"&SpId="+params.SpId+"&Com="+Co+"&Res=Approved";
-        window.location=URL;
+        window.location=Url;
       }
       function onReject(urlString) {
         var Co=document.getElementById("co").value; 
@@ -25,7 +25,7 @@
         
         var url="https://script.google.com/a/macros/envases.dk/s/AKfycbzVrPsljDBZjxYCiCRylqv6dGa5YsLWJOC3ZlHNw6erqkVYDlLbOFrPu5kZc5bkJ0NGdA/exec";
         Url = Url + "?Id="+params.Id+"&SpId="+params.SpId+"&Com="+Co+"&Res=Approved";
-        window.location=URL;
+        window.location=Url;
       }
       function readSearchParams() {
         let usp = new URLSearchParams(window.location.search);
