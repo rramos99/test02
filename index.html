@@ -17,26 +17,27 @@
       
         var Url="https://script.google.com/a/macros/envases.dk/s/AKfycbzVrPsljDBZjxYCiCRylqv6dGa5YsLWJOC3ZlHNw6erqkVYDlLbOFrPu5kZc5bkJ0NGdA/exec";
         Url = Url + "?Id="+params.Id+"&SpId="+params.SpId+"&Com="+Co+"&Res=Approved";
-        $.ajax({ url: Url });        
+        window.location=URL;
       }
       function onReject(urlString) {
         var Co=document.getElementById("co").value; 
-        let params = readSearchParams();        
+        let params = readSearchParams();
+        
         var url="https://script.google.com/a/macros/envases.dk/s/AKfycbzVrPsljDBZjxYCiCRylqv6dGa5YsLWJOC3ZlHNw6erqkVYDlLbOFrPu5kZc5bkJ0NGdA/exec";
         Url = Url + "?Id="+params.Id+"&SpId="+params.SpId+"&Com="+Co+"&Res=Approved";
-        $.ajax({ url: Url });        
+        window.location=URL;
       }
       function readSearchParams() {
         let usp = new URLSearchParams(window.location.search);
         let params = {};
         usp.forEach((value, key) => {
-        if (!params[key]) {
-          params[key] = [];
-        }
-        params[key].push(value);
-      });
-  return params;
-}      
+          if (!params[key]) {
+            params[key] = [];
+          }
+          params[key].push(value);
+        });
+        return params;
+      }      
     </script>
   </body>
 </html>
